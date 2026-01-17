@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moving Color Text</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #111;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .moving-text {
+      font-size: 32px;
+      font-weight: bold;
+      white-space: nowrap;
+      position: absolute;
+      animation: moveText 8s linear infinite, colorShift 4s linear infinite;
+    }
+
+    @keyframes moveText {
+      from {
+        left: -100%;
+      }
+      to {
+        left: 100%;
+      }
+    }
+
+    @keyframes colorShift {
+      0%   { color: red; }
+      20%  { color: orange; }
+      40%  { color: yellow; }
+      60%  { color: lime; }
+      80%  { color: cyan; }
+      100% { color: magenta; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="moving-text">
+    can i come into your house for 5 housrs pls sangam
+  </div>
+
+</body>
+</html>
